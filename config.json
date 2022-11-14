@@ -1,0 +1,26 @@
+{
+	"bank": {
+		"fair_key" : "marital",
+		"fair_val" : ["single", "married"],
+		"dist_key" : ["age", "balance", "duration"],
+		"sample_size" : [650, 350],
+		"seed" : 21,
+		"dist_threshold" : 400
+	},
+	"census": {
+		"fair_key" : "gender",
+		"fair_val" : ["Male", "Female"],
+		"dist_key" : ["age", "fnlwgt", "education_num", "capital_gain", "hours_per_week"],
+		"split_size" : [400, 200],
+		"random_state" : 42,
+		"dist_threshold" : 225000
+	},
+	"diabetes": {
+		"fair_key" : "gender",
+		"fair_val" : ["Male", "Female"],
+		"dist_key" : ["age", "time_in_hospital"],
+		"split_size" : [540, 460],
+		"random_state" : 21,
+		"dist_threshold" : 40
+	}
+}
