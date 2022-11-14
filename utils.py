@@ -25,11 +25,11 @@ def balance(data, centers, mapping):
 	return final_balance
 
 def plot_analysis(degrees, costs, balances, step_size):
-	fig, ax = plt.subplots(nrows=1, ncols=2, figsize=(14, 5))
-	ax[0].plot(costs, marker='.', color='blue')
+	fig, ax = plt.subplots(nrows=1, ncols=2, figsize=(18, 4))
+	ax[0].plot(costs, marker='o', markersize=10, color='blue')
 	ax[0].set_xticks(list(range(0, len(degrees), step_size))) 
-	ax[0].set_xticklabels(list(range(min(degrees), max(degrees)+1, step_size)), fontsize=12)
-	ax[1].plot(balances, marker='x', color='saddlebrown')
+	ax[0].set_xticklabels(list(range(min(degrees), max(degrees)+1, step_size)), fontsize=14)
+	ax[1].plot(balances, marker='o',markersize=10,color='red')
 	ax[1].set_xticks(list(range(0, len(degrees), step_size))) 
-	ax[1].set_xticklabels(list(range(min(degrees), max(degrees)+1, step_size)), fontsize=12)
+	ax[1].set_xticklabels(list(range(min(degrees), max(degrees)+1, step_size)), fontsize=14)
 	plt.show()
