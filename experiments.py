@@ -3,21 +3,6 @@ import kcenters
 from utils import dist, balance
 
 def run_experiments(degrees, data, fairlets, fairlet_centers, verbose=True):
-	"""
-	Run experiments for decomposition.
-
-	Args:
-		degrees (int) : Maximum degree for running K-Centers
-		data (list) : Data points
-		fairlets (list) : Fairlets obtained from the decomposition
-		fairlet_centers (list) : Fairlet centers obtained from the decomposition
-		verbose (bool) : Indicator for printing progress
-
-	Returns:
-		curr_degrees (list)
-		curr_costs (list)
-		curr_balances (list)
-	"""
 	curr_degrees = []
 	curr_costs = []
 	curr_balances = []
@@ -39,6 +24,6 @@ def run_experiments(degrees, data, fairlets, fairlet_centers, verbose=True):
 		curr_balances.append(balance(data, centers, final_clusters))
 		
 		if verbose:
-			print("Time taken for Degree %d - %.3f seconds."%(degree, time.time() - start_time))
+			print("Time for # Cluster %d - %.3f seconds."%(degree, time.time() - start_time))
 
 	return curr_degrees, curr_costs, curr_balances

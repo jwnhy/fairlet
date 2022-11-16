@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-dataname = "bank"
+dataname = "census"
 fair_key = "marital"
 fair_val = ["single", "married"]
 dist_key = ["age", "balance", "duration"]
